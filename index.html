@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priscilla Nzula - Data Scientist & Analyst</title>
+    <title>Priscilla Nzula - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -17,114 +17,30 @@
             color: #333;
         }
 
-        /* Navigation Bar */
-        .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .nav a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: #0056b3;
-        }
-
-        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: linear-gradient(to right, #007bff, #0056b3);
             color: white;
-            padding: 8rem 2rem 4rem;
+            padding: 4rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('/api/placeholder/1920/1080') center/cover;
-            opacity: 0.1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero h2 {
             font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 400;
         }
 
         .hero p {
             max-width: 800px;
             margin: 0 auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: 1.1rem;
         }
 
-        /* Skills Section */
-        .skills {
-            padding: 4rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .skills h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #007bff;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .skill-card h3 {
-            color: #007bff;
-            margin-bottom: 1rem;
-        }
-
-        /* Projects Section */
         .projects {
             padding: 4rem 2rem;
         }
@@ -149,12 +65,11 @@
             padding: 1.5rem;
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .project-card h3 {
@@ -173,15 +88,12 @@
             display: inline-block;
             margin-top: 1rem;
             font-weight: 500;
-            transition: color 0.3s ease;
         }
 
         .project-card a:hover {
-            color: #0056b3;
             text-decoration: underline;
         }
 
-        /* Business Analysis Section */
         .business-analysis {
             background: #f9f9f9;
             padding: 4rem 2rem;
@@ -202,9 +114,8 @@
             margin-bottom: 2rem;
         }
 
-        /* Contact Section */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background: #333;
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -214,26 +125,12 @@
             margin-bottom: 1.5rem;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .contact-item {
-            padding: 1rem;
-        }
-
         footer a {
             color: #7cc5ff;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: white;
             text-decoration: underline;
         }
 
@@ -241,14 +138,7 @@
             margin: 0.5rem 0;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
             .hero h1 {
                 font-size: 2rem;
             }
@@ -264,57 +154,25 @@
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header id="about" class="hero">
-        <div class="hero-content">
-            <h1>Priscilla Nzula</h1>
-            <h2>Data Scientist | Data Analyst</h2>
-            <p>Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
-            Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.</p>
-        </div>
+    <header class="hero">
+        <h1>Priscilla Nzula</h1>
+        <h2>Data Scientist | Data Analyst</h2>
+        <p>A Data Scientist and Analyst with a passion for uncovering insights, I specialize in transforming complex datasets into actionable strategies that drive measurable business impact. Leveraging advanced machine learning, statistical analysis, and exploratory data techniques, I’ve developed predictive models achieving over 85% accuracy in real estate valuation and 90% in customer churn prediction. As a data analyst, I’ve also identified key trends, segmented customer behaviors, and created interactive dashboards for real-time decision support, helping optimize revenue streams and reduce costs. By bridging data science with business intelligence, I deliver scalable, data-driven solutions that enhance customer retention, streamline operations, and empower data-informed decision-making.</p>
     </header>
 
-    <section id="skills" class="skills">
-        <h2>Core Competencies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Data Analysis</h3>
-                <p>Python, R, SQL, Statistical Analysis, Data Visualization</p>
-            </div>
-            <div class="skill-card">
-                <h3>Machine Learning</h3>
-                <p>Predictive Modeling, Classification, Regression, Neural Networks</p>
-            </div>
-            <div class="skill-card">
-                <h3>Business Intelligence</h3>
-                <p>Power BI, Tableau, Dashboard Development, KPI Monitoring</p>
-            </div>
-            <div class="skill-card">
-                <h3>Tools & Technologies</h3>
-                <p>Git, AWS, Docker, Jupyter, Scikit-learn, TensorFlow</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
+    <section class="projects">
         <h2>Featured Projects</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Pro Realty Real Estate Analysis</h3>
-                <p>Developed a machine learning model to predict house prices in King County, optimizing investment decisions.</p>
+                <p>Developed a comprehensive machine learning model to predict house prices in King County, enabling data-driven investment decisions and ROI optimization. The model analyzes multiple features to provide accurate price predictions and market insights.</p>
                 <h4>Technologies Used:</h4>
                 <ul>
-                    <li>Python</li>
-                    <li>Scikit-learn</li>
-                    <li>Matplotlib</li>
+                    <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                    <li>Jupyter Notebooks</li>
+                    <li>Statistical Analysis</li>
+                    <li>Machine Learning (Linear Regression)</li>
+                    <li>Data Visualization (Matplotlib, Seaborn)</li>
                     <li>Git & GitHub</li>
                 </ul>
                 <h4>Key Achievements:</h4>
@@ -327,17 +185,18 @@
 
             <div class="project-card">
                 <h3>SyriaTel Customer Churn Analysis</h3>
-                <p>Built a predictive analytics model to identify high-risk churn customers, enhancing retention strategies.</p>
+                <p>Built an advanced predictive analytics solution to identify customers at risk of churning, enabling proactive retention strategies and revenue protection. The project involved comprehensive data analysis and machine learning model development.</p>
                 <h4>Technologies Used:</h4>
                 <ul>
-                    <li>Python</li>
-                    <li>Classification Models</li>
-                    <li>Seaborn</li>
+                    <li>Python(Pandas, NumPy, Scikit-learn)</li>
+                    <li>Machine Learning (Classification Models)</li>
+                    <li>Data Visualization (Matplotlib, Seaborn)</li>
                 </ul>
                 <h4>Key Achievements:</h4>
                 <ul>
                     <li>90% accuracy in churn prediction</li>
                     <li>Key customer behavior insights</li>
+                    <li>Created actionable insights for retention strategies</li>
                 </ul>
                 <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/">View Project →</a>
             </div>
@@ -358,23 +217,13 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <footer>
         <h2>Let's Connect</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-            </div>
-            <div class="contact-item">
-                <p>Phone: +254 792 214 211</p>
-            </div>
-            <div class="contact-item">
-                <p>Location: Nairobi, Kenya</p>
-            </div>
-            <div class="contact-item">
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
-                <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
-            </div>
-        </div>
+        <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
+        <p>Phone: +254 792 214 211</p>
+        <p>Location: Nairobi, Kenya</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
     </footer>
 </body>
 </html>
