@@ -74,24 +74,39 @@
         .business-analysis {
             background: #f9f9f9;
             padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
         }
 
-        .container {
+        .business-analysis .container {
             max-width: 800px;
-            margin: 0 auto;
         }
 
         footer {
             background: #333;
             color: white;
             padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
             text-align: center;
+        }
+
+        footer div {
+            margin: 0 auto;
         }
 
         footer i {
             color: #7cc5ff;
             margin-right: 0.5rem;
             font-size: 1.2rem;
+        }
+
+        footer a {
+            color: #7cc5ff;
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
@@ -101,6 +116,10 @@
             }
             .hero img {
                 margin-top: 1rem;
+            }
+            .business-analysis {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
         }
     </style>
@@ -131,20 +150,29 @@
     </section>
 
     <section class="business-analysis">
-        <h2>Case Study: Kwanza Tukule</h2>
         <div class="container">
+            <h2>Business Analysis (Case Study: Kwanza Tukule)</h2>
             <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule...</p>
             <a href="https://github.com/priscillanzula/Case_study-.git">View Full Analysis →</a>
         </div>
+        <img src="https://via.placeholder.com/400" alt="Analysis Visual" />
     </section>
 
     <footer>
-        <h2>Let's Connect</h2>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> Phone: +254 792 214 211</p>
-        <p><i class="fas fa-map-marker-alt"></i> Location: Nairobi, Kenya</p>
-        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
-        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
+        <div>
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> +254 792 214 211</p>
+        </div>
+        <div>
+            <h3>Location</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+        </div>
+        <div>
+            <h3>Follow</h3>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/priscillanzula" target="_blank">GitHub</a></p>
+        </div>
     </footer>
 </body>
 </html>
