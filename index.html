@@ -22,22 +22,22 @@
             background: linear-gradient(to right, #007bff, #0056b3);
             color: white;
             padding: 4rem 2rem;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            justify-content: center;
-            text-align: left;
+            gap: 2rem;
         }
 
         .hero img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 3px solid white;
-            margin-left: 2rem;
+            justify-self: center;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 600px;
         }
 
         .projects {
@@ -76,6 +76,11 @@
             padding: 4rem 2rem;
         }
 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -91,11 +96,10 @@
 
         @media (max-width: 768px) {
             .hero {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 text-align: center;
             }
             .hero img {
-                margin-left: 0;
                 margin-top: 1rem;
             }
         }
@@ -108,7 +112,6 @@
             <p>A Data Scientist with a passion for uncovering insights, I specialize in transforming complex datasets into actionable strategies...</p>
         </div>
         <img src="https://raw.githubusercontent.com/username/repo/main/NDSCF3967.jpg" alt="Priscilla Nzula">
-
     </header>
 
     <section class="projects">
