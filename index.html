@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priscilla Nzula - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -22,22 +21,24 @@
             background: linear-gradient(to right, #007bff, #0056b3);
             color: white;
             padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 2rem;
+            text-align: center;
         }
 
-        .hero img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 3px solid white;
-            justify-self: center;
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        .hero-content {
-            max-width: 600px;
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
         }
 
         .projects {
@@ -71,14 +72,46 @@
             transform: translateY(-5px);
         }
 
+        .project-card h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .project-card ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .project-card a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
         .business-analysis {
             background: #f9f9f9;
             padding: 4rem 2rem;
         }
 
-        .container {
+        .business-analysis .container {
             max-width: 800px;
             margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .business-analysis h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 2rem;
         }
 
         footer {
@@ -88,30 +121,43 @@
             text-align: center;
         }
 
-        footer i {
+        footer h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        footer a {
             color: #7cc5ff;
-            margin-right: 0.5rem;
-            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .hero h1 {
+                font-size: 2rem;
             }
-            .hero img {
-                margin-top: 1rem;
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header class="hero">
-        <div class="hero-content">
-            <h1>Priscilla Nzula | Data Scientist</h1>
-            <p>A Data Scientist with a passion for uncovering insights, I specialize in transforming complex datasets into actionable strategies...</p>
-        </div>
-        <img src="https://raw.githubusercontent.com/username/repo/main/NDSCF3967.jpg" alt="Priscilla Nzula">
+        <h1>Priscilla Nzula|Data Scientist</h1>
+        
+        <p>A Data Scientist with a passion for uncovering insights, I specialize in transforming complex datasets into actionable strategies that drive measurable business impact. Leveraging advanced machine learning, statistical analysis, and exploratory data techniques, I’ve developed predictive models achieving over 85% accuracy in real estate valuation and 90% in customer churn prediction. As a data analyst, I’ve also identified key trends, segmented customer behaviors, and created interactive dashboards for real-time decision support, helping optimize revenue streams and reduce costs. By bridging data science with business intelligence, I deliver scalable, data-driven solutions that enhance customer retention, streamline operations, and empower data-informed decision-making.</p>
     </header>
 
     <section class="projects">
@@ -119,32 +165,68 @@
         <div class="project-grid">
             <div class="project-card">
                 <h3>Pro Realty Real Estate Analysis</h3>
-                <p>Developed a comprehensive machine learning model to predict house prices...</p>
+                <p>Developed a comprehensive machine learning model to predict house prices in King County, enabling data-driven investment decisions and ROI optimization. The model analyzes multiple features to provide accurate price predictions and market insights.</p>
+                <h4>Technologies Used:</h4>
+                <ul>
+                    <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                    <li>Jupyter Notebooks</li>
+                    <li>Statistical Analysis</li>
+                    <li>Machine Learning (Linear Regression)</li>
+                    <li>Data Visualization (Matplotlib, Seaborn)</li>
+                    <li>Git & GitHub</li>
+                </ul>
+                <h4>Key Achievements:</h4>
+                <ul>
+                    <li>85% accuracy in price prediction</li>
+                    <li>Feature importance analysis</li>
+                </ul>
                 <a href="https://github.com/priscillanzula/pro_realty.git">View Project →</a>
             </div>
+
             <div class="project-card">
                 <h3>SyriaTel Customer Churn Analysis</h3>
-                <p>Built an advanced predictive analytics solution to identify customers at risk of churning...</p>
+                <p>Built an advanced predictive analytics solution to identify customers at risk of churning, enabling proactive retention strategies and revenue protection. The project involved comprehensive data analysis and machine learning model development.</p>
+                <h4>Technologies Used:</h4>
+                <ul>
+                    <li>Python(Pandas, NumPy, Scikit-learn)</li>
+                    <li>Machine Learning (Classification Models)</li>
+                    <li>Data Visualization (Matplotlib, Seaborn)</li>
+                </ul>
+                <h4>Key Achievements:</h4>
+                <ul>
+                    <li>90% accuracy in churn prediction</li>
+                    <li>Key customer behavior insights</li>
+                    <li>Created actionable insights for retention strategies</li>
+                </ul>
                 <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/">View Project →</a>
             </div>
         </div>
     </section>
 
     <section class="business-analysis">
-        <h2>Case Study: Kwanza Tukule</h2>
+        <h2>Business Analysis (Case Study: Kwanza Tukule)</h2>
         <div class="container">
-            <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule...</p>
-            <a href="https://github.com/priscillanzula/Case_study-.git">View Full Analysis →</a>
+            <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.</p>
+            <ul>
+                <li>Identified seasonal sales trends and high-revenue products.</li>
+                <li>Segmented customers to optimize marketing strategies.</li>
+                <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
+                <li>Detected anomalies impacting business performance.</li>
+            </ul>
+           
+            <a href=" https://github.com/priscillanzula/Case_study-.git">View Full Analysis →</a>
         </div>
     </section>
 
     <footer>
         <h2>Let's Connect</h2>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> Phone: +254 792 214 211</p>
-        <p><i class="fas fa-map-marker-alt"></i> Location: Nairobi, Kenya</p>
-        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
-        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
+        <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
+        <p>Phone: +254 792 214 211</p>
+        <p>Location: Nairobi, Kenya</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
     </footer>
 </body>
 </html>
+
+
