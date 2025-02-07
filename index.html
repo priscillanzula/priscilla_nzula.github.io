@@ -1,218 +1,108 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Priscilla Nzula - Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dySpfJ7fbH3+icYUXPoqqt0AgOZ2D11n1NhrTnhCg3GxWT3pGELKjOEf7Q+d+Xb2BOMD1/y1X7ibK7q2gO2c0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+import React from 'react';
+import { Terminal, Database, LineChart, Code, BarChart, Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
-        h1, h2, h3 {
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #FFD700;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #d3d3d3;
-        }
-
-        a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        #wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        #intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        #intro h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        #intro p {
-            margin: 10px 0;
-        }
-
-        #intro .actions {
-            margin-top: 20px;
-        }
-
-        #intro .actions .button {
-            background: #FFD700;
-            color: #121212;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        #nav {
-            background: #1e1e1e;
-            width: 100%;
-            text-align: center;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-        }
-
-        #nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        #nav ul li {
-            display: inline;
-        }
-
-        #nav ul li a {
-            color: #FFD700;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
-
-        #nav ul li a:hover {
-            background: #FFD700;
-            color: #121212;
-        }
-
-        section {
-            width: 80%;
-            margin: 20px auto;
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .main {
-            margin-bottom: 30px;
-        }
-
-        .main img {
-            width: 100%;
-            border-radius: 15px;
-        }
-
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            padding: 10px;
-            background: #1e1e1e;
-            color: #FFD700;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-    <div id="wrapper">
-        <!-- Intro -->
-        <div id="intro">
-            <h1>Priscilla Nzula</h1>
-            <p>Data Scientist | Data Analyst</p>
-            <p>Transforming complex datasets into strategic business solutions</p>
-            <div class="actions">
-                <a href="#about" class="button">Explore</a>
-            </div>
-        </div>
-
-        <!-- Navigation -->
-        <nav id="nav">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- About Me -->
-        <section id="about" class="main">
-            <h2>About Me</h2>
-            <p>Innovative Data Scientist with expertise in machine learning, statistical analysis, and data visualization. Passionate about solving business problems using data-driven insights.</p>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="main">
-            <h2>Projects</h2>
-            <div>
-                <h3>Pro Realty Real Estate Analysis</h3>
-                <p>Predicting house prices using ML models.</p>
-                <a href="https://github.com/priscillanzula/pro_realty.git">View Project</a>
-            </div>
-            <div>
-                <h3>SyriaTel Customer Churn Analysis</h3>
-                <p>Churn prediction model for telecom.</p>
-                <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/">View Project</a>
-            </div>
-        </section>
-
-        <!-- Case Studies -->
-        <section id="case-studies" class="main">
-            <h2>Case Studies</h2>
-            <h3>Kwanza Tukule Business Analysis</h3>
-            <p>Conducted a data-driven analysis to enhance sales performance and customer retention.</p>
-            <a href="#">Read More</a>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="main">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: Python, SQL, JavaScript</li>
-                <li>Frameworks: React, Flask</li>
-                <li>Databases: PostgreSQL, MySQL</li>
-                <li>Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</li>
-                <li>Version Control: Git & GitHub</li>
-                <li>Other Tools: Google Sheets, Google Analytics, Microsoft Teams</li>
-            </ul>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="main">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-            <p>Phone: +254 792 214 211</p>
-            <p>Location: Nairobi, Kenya</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/priscillanzula">GitHub Profile</a></p>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Priscilla Nzula</p>
-        </footer>
+const ProjectCard = ({ title, description, technologies, achievements, link }) => (
+  <div className="p-8 border rounded-lg shadow-lg hover:shadow-xl transition-shadow bg-white">
+    <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+    <p className="text-gray-600 mb-6">{description}</p>
+    <h4 className="text-lg font-semibold mb-3 flex items-center"><Code className="w-5 h-5 mr-2 text-blue-600" /> Technologies Used</h4>
+    <div className="flex flex-wrap gap-2 mb-6">
+      {technologies.map((tech, index) => (
+        <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">{tech}</span>
+      ))}
     </div>
-</body>
-</html>
+    <h4 className="text-lg font-semibold mb-3 flex items-center"><BarChart className="w-5 h-5 mr-2 text-blue-600" /> Key Achievements</h4>
+    <ul className="space-y-2">
+      {achievements.map((achievement, index) => (
+        <li key={index} className="flex items-start"><Terminal className="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" /> {achievement}</li>
+      ))}
+    </ul>
+    <a href={link} className="text-blue-600 mt-4 inline-block">View Project →</a>
+  </div>
+);
+
+const Portfolio = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section with Enhanced Professional Summary */}
+      <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+          <div className="md:w-1/2">
+            <h1 className="text-4xl font-bold mb-4">Priscilla Nzula</h1>
+            <h2 className="text-2xl mb-6">Data Scientist | Data Analyst</h2>
+            <p className="text-lg leading-relaxed">
+              Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
+              Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <input type="file" accept="image/*" className="hidden" id="profile-upload" />
+            <label htmlFor="profile-upload" className="cursor-pointer">
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="Priscilla Nzula" 
+                className="rounded-lg shadow-xl w-full max-w-md mx-auto hover:opacity-80 transition"
+              />
+            </label>
+          </div>
+        </div>
+      </header>
+
+      {/* Projects Section with Technologies */}
+      <section className="py-16 container mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+        <div className="space-y-12">
+          <ProjectCard 
+            title="Pro Realty Real Estate Analysis"
+            description="Developed a machine learning model to predict house prices in King County, optimizing investment decisions."
+            technologies={["Python", "Scikit-learn", "Matplotlib", "Git & GitHub"]}
+            achievements={["85% accuracy in price prediction", "Feature importance analysis"]}
+            link="https://github.com/priscillanzula/pro_realty.git"
+          />
+          <ProjectCard 
+            title="SyriaTel Customer Churn Analysis"
+            description="Built a predictive analytics model to identify high-risk churn customers, enhancing retention strategies."
+            technologies={["Python", "Classification Models", "Seaborn"]}
+            achievements={["90% accuracy in churn prediction", "Key customer behavior insights"]}
+            link="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/"
+          />
+        </div>
+      </section>
+
+      {/* Business Analysis Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center">Business Analysis (Case Study: Kwanza Tukule)</h2>
+          <div className="p-8 border rounded-lg shadow-lg bg-white">
+            <p className="text-lg mb-4">
+              Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.
+            </p>
+            <ul className="list-disc ml-6 space-y-2 text-gray-700">
+              <li>Identified seasonal sales trends and high-revenue products.</li>
+              <li>Segmented customers to optimize marketing strategies.</li>
+              <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
+              <li>Detected anomalies impacting business performance.</li>
+            </ul>
+            <a href="#" className="text-blue-600 mt-4 inline-block">Read Full Analysis →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-gray-800 text-white py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
+          <div className="flex flex-col space-y-4 items-center">
+            <p className="text-lg flex items-center gap-2"><Mail className="w-5 h-5" /> danielpriscilla61@gmail.com</p>
+            <p className="text-lg flex items-center gap-2"><Phone className="w-5 h-5" /> +254 792 214 211</p>
+            <p className="text-lg flex items-center gap-2"><MapPin className="w-5 h-5" /> Nairobi, Kenya</p>
+            <p className="text-lg flex items-center gap-2"><Linkedin className="w-5 h-5" /> <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank" rel="noopener noreferrer" className="text-blue-400">LinkedIn</a></p>
+            <p className="text-lg flex items-center gap-2"><Github className="w-5 h-5" /> <a href="https://github.com/priscillanzula" target="_blank" rel="noopener noreferrer" className="text-blue-400">GitHub</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Portfolio;
