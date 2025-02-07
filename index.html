@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priscilla Nzula - Portfolio</title>
+    <title>Priscilla Nzula - Data Scientist & Analyst</title>
     <style>
         * {
             margin: 0;
@@ -17,30 +17,114 @@
             color: #333;
         }
 
+        /* Navigation Bar */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #0056b3;
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(to right, #007bff, #0056b3);
+            background: linear-gradient(135deg, #007bff, #0056b3);
             color: white;
-            padding: 4rem 2rem;
+            padding: 8rem 2rem 4rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/api/placeholder/1920/1080') center/cover;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero h2 {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-weight: 400;
         }
 
         .hero p {
             max-width: 800px;
             margin: 0 auto;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
 
+        /* Skills Section */
+        .skills {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #007bff;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .skill-card h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
         .projects {
             padding: 4rem 2rem;
         }
@@ -65,11 +149,12 @@
             padding: 1.5rem;
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .project-card h3 {
@@ -88,12 +173,15 @@
             display: inline-block;
             margin-top: 1rem;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .project-card a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
 
+        /* Business Analysis Section */
         .business-analysis {
             background: #f9f9f9;
             padding: 4rem 2rem;
@@ -114,8 +202,9 @@
             margin-bottom: 2rem;
         }
 
+        /* Contact Section */
         footer {
-            background: #333;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -125,12 +214,26 @@
             margin-bottom: 1.5rem;
         }
 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            padding: 1rem;
+        }
+
         footer a {
             color: #7cc5ff;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
+            color: white;
             text-decoration: underline;
         }
 
@@ -138,7 +241,14 @@
             margin: 0.5rem 0;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
@@ -154,14 +264,47 @@
     </style>
 </head>
 <body>
-    <header class="hero">
-        <h1>Priscilla Nzula</h1>
-        <h2>Data Scientist | Data Analyst</h2>
-        <p>Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
-        Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.</p>
+    <nav class="nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <h1>Priscilla Nzula</h1>
+            <h2>Data Scientist | Data Analyst</h2>
+            <p>Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
+            Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.</p>
+        </div>
     </header>
 
-    <section class="projects">
+    <section id="skills" class="skills">
+        <h2>Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Data Analysis</h3>
+                <p>Python, R, SQL, Statistical Analysis, Data Visualization</p>
+            </div>
+            <div class="skill-card">
+                <h3>Machine Learning</h3>
+                <p>Predictive Modeling, Classification, Regression, Neural Networks</p>
+            </div>
+            <div class="skill-card">
+                <h3>Business Intelligence</h3>
+                <p>Power BI, Tableau, Dashboard Development, KPI Monitoring</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools & Technologies</h3>
+                <p>Git, AWS, Docker, Jupyter, Scikit-learn, TensorFlow</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
         <h2>Featured Projects</h2>
         <div class="project-grid">
             <div class="project-card">
@@ -215,13 +358,23 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <h2>Let's Connect</h2>
-        <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-        <p>Phone: +254 792 214 211</p>
-        <p>Location: Nairobi, Kenya</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <p>Phone: +254 792 214 211</p>
+            </div>
+            <div class="contact-item">
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+            <div class="contact-item">
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
+                <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
