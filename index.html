@@ -1,108 +1,86 @@
-import React from 'react';
-import { Terminal, Database, LineChart, Code, BarChart, Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla Nzula - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(to right, #007bff, #0056b3); color: white; padding: 40px 20px; text-align: center;">
+        <h1>Priscilla Nzula</h1>
+        <h2>Data Scientist | Data Analyst</h2>
+        <p>Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
+        Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.</p>
+    </header>
 
-const ProjectCard = ({ title, description, technologies, achievements, link }) => (
-  <div className="p-8 border rounded-lg shadow-lg hover:shadow-xl transition-shadow bg-white">
-    <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-    <p className="text-gray-600 mb-6">{description}</p>
-    <h4 className="text-lg font-semibold mb-3 flex items-center"><Code className="w-5 h-5 mr-2 text-blue-600" /> Technologies Used</h4>
-    <div className="flex flex-wrap gap-2 mb-6">
-      {technologies.map((tech, index) => (
-        <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">{tech}</span>
-      ))}
-    </div>
-    <h4 className="text-lg font-semibold mb-3 flex items-center"><BarChart className="w-5 h-5 mr-2 text-blue-600" /> Key Achievements</h4>
-    <ul className="space-y-2">
-      {achievements.map((achievement, index) => (
-        <li key={index} className="flex items-start"><Terminal className="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" /> {achievement}</li>
-      ))}
-    </ul>
-    <a href={link} className="text-blue-600 mt-4 inline-block">View Project →</a>
-  </div>
-);
+    <!-- Projects Section -->
+    <section style="padding: 40px 20px;">
+        <h2 style="text-align: center;">Featured Projects</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <!-- Project 1 -->
+            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 300px; background-color: #fff;">
+                <h3>Pro Realty Real Estate Analysis</h3>
+                <p>Developed a machine learning model to predict house prices in King County, optimizing investment decisions.</p>
+                <h4>Technologies Used:</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Scikit-learn</li>
+                    <li>Matplotlib</li>
+                    <li>Git & GitHub</li>
+                </ul>
+                <h4>Key Achievements:</h4>
+                <ul>
+                    <li>85% accuracy in price prediction</li>
+                    <li>Feature importance analysis</li>
+                </ul>
+                <a href="https://github.com/priscillanzula/pro_realty.git" style="color: blue;">View Project →</a>
+            </div>
 
-const Portfolio = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section with Enhanced Professional Summary */}
-      <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl font-bold mb-4">Priscilla Nzula</h1>
-            <h2 className="text-2xl mb-6">Data Scientist | Data Analyst</h2>
-            <p className="text-lg leading-relaxed">
-              Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
-              Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.
-            </p>
-          </div>
-          <div className="md:w-1/2">
-            <input type="file" accept="image/*" className="hidden" id="profile-upload" />
-            <label htmlFor="profile-upload" className="cursor-pointer">
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Priscilla Nzula" 
-                className="rounded-lg shadow-xl w-full max-w-md mx-auto hover:opacity-80 transition"
-              />
-            </label>
-          </div>
+            <!-- Project 2 -->
+            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 300px; background-color: #fff;">
+                <h3>SyriaTel Customer Churn Analysis</h3>
+                <p>Built a predictive analytics model to identify high-risk churn customers, enhancing retention strategies.</p>
+                <h4>Technologies Used:</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Classification Models</li>
+                    <li>Seaborn</li>
+                </ul>
+                <h4>Key Achievements:</h4>
+                <ul>
+                    <li>90% accuracy in churn prediction</li>
+                    <li>Key customer behavior insights</li>
+                </ul>
+                <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/" style="color: blue;">View Project →</a>
+            </div>
         </div>
-      </header>
+    </section>
 
-      {/* Projects Section with Technologies */}
-      <section className="py-16 container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-        <div className="space-y-12">
-          <ProjectCard 
-            title="Pro Realty Real Estate Analysis"
-            description="Developed a machine learning model to predict house prices in King County, optimizing investment decisions."
-            technologies={["Python", "Scikit-learn", "Matplotlib", "Git & GitHub"]}
-            achievements={["85% accuracy in price prediction", "Feature importance analysis"]}
-            link="https://github.com/priscillanzula/pro_realty.git"
-          />
-          <ProjectCard 
-            title="SyriaTel Customer Churn Analysis"
-            description="Built a predictive analytics model to identify high-risk churn customers, enhancing retention strategies."
-            technologies={["Python", "Classification Models", "Seaborn"]}
-            achievements={["90% accuracy in churn prediction", "Key customer behavior insights"]}
-            link="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/"
-          />
-        </div>
-      </section>
-
-      {/* Business Analysis Section */}
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-center">Business Analysis (Case Study: Kwanza Tukule)</h2>
-          <div className="p-8 border rounded-lg shadow-lg bg-white">
-            <p className="text-lg mb-4">
-              Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.
-            </p>
-            <ul className="list-disc ml-6 space-y-2 text-gray-700">
-              <li>Identified seasonal sales trends and high-revenue products.</li>
-              <li>Segmented customers to optimize marketing strategies.</li>
-              <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
-              <li>Detected anomalies impacting business performance.</li>
+    <!-- Business Analysis Section -->
+    <section style="background-color: #f9f9f9; padding: 40px 20px;">
+        <h2 style="text-align: center;">Business Analysis (Case Study: Kwanza Tukule)</h2>
+        <div style="max-width: 800px; margin: auto; border: 1px solid #ccc; border-radius: 8px; padding: 20px; background-color: #fff;">
+            <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.</p>
+            <ul>
+                <li>Identified seasonal sales trends and high-revenue products.</li>
+                <li>Segmented customers to optimize marketing strategies.</li>
+                <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
+                <li>Detected anomalies impacting business performance.</li>
             </ul>
-            <a href="#" className="text-blue-600 mt-4 inline-block">Read Full Analysis →</a>
-          </div>
+            <a href="#" style="color: blue;">Read Full Analysis →</a>
         </div>
-      </section>
+    </section>
 
-      {/* Contact Section */}
-      <section className="bg-gray-800 text-white py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
-          <div className="flex flex-col space-y-4 items-center">
-            <p className="text-lg flex items-center gap-2"><Mail className="w-5 h-5" /> danielpriscilla61@gmail.com</p>
-            <p className="text-lg flex items-center gap-2"><Phone className="w-5 h-5" /> +254 792 214 211</p>
-            <p className="text-lg flex items-center gap-2"><MapPin className="w-5 h-5" /> Nairobi, Kenya</p>
-            <p className="text-lg flex items-center gap-2"><Linkedin className="w-5 h-5" /> <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank" rel="noopener noreferrer" className="text-blue-400">LinkedIn</a></p>
-            <p className="text-lg flex items-center gap-2"><Github className="w-5 h-5" /> <a href="https://github.com/priscillanzula" target="_blank" rel="noopener noreferrer" className="text-blue-400">GitHub</a></p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default Portfolio;
+    <!-- Contact Section -->
+    <footer style="background-color: #333; color: white; padding: 40px 20px; text-align: center;">
+        <h2>Let's Connect</h2>
+        <p>Email: <a href="mailto:danielpriscilla61@gmail.com" style="color: lightblue;">danielpriscilla61@gmail.com</a></p>
+        <p>Phone: +254 792 214 211</p>
+        <p>Location: Nairobi, Kenya</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank" style="color: lightblue;">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank" style="color: lightblue;">GitHub Profile</a></p>
+    </footer>
+</body>
+</html>
