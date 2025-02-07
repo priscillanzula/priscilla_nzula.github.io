@@ -1,218 +1,86 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priscilla Nzula - Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dySpfJ7fbH3+icYUXPoqqt0AgOZ2D11n1NhrTnhCg3GxWT3pGELKjOEf7Q+d+Xb2BOMD1/y1X7ibK7q2gO2c0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2, h3 {
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #FFD700;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #d3d3d3;
-        }
-
-        a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        #wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        #intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        #intro h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        #intro p {
-            margin: 10px 0;
-        }
-
-        #intro .actions {
-            margin-top: 20px;
-        }
-
-        #intro .actions .button {
-            background: #FFD700;
-            color: #121212;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        #nav {
-            background: #1e1e1e;
-            width: 100%;
-            text-align: center;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-        }
-
-        #nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        #nav ul li {
-            display: inline;
-        }
-
-        #nav ul li a {
-            color: #FFD700;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
-
-        #nav ul li a:hover {
-            background: #FFD700;
-            color: #121212;
-        }
-
-        section {
-            width: 80%;
-            margin: 20px auto;
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .main {
-            margin-bottom: 30px;
-        }
-
-        .main img {
-            width: 100%;
-            border-radius: 15px;
-        }
-
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            padding: 10px;
-            background: #1e1e1e;
-            color: #FFD700;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="wrapper">
-        <!-- Intro -->
-        <div id="intro">
-            <h1>Priscilla Nzula</h1>
-            <p>Data Scientist | Data Analyst</p>
-            <p>Transforming complex datasets into strategic business solutions</p>
-            <div class="actions">
-                <a href="#about" class="button">Explore</a>
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(to right, #007bff, #0056b3); color: white; padding: 40px 20px; text-align: center;">
+        <h1>Priscilla Nzula</h1>
+        <h2>Data Scientist | Data Analyst</h2>
+        <p>Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
+        Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.</p>
+    </header>
+
+    <!-- Projects Section -->
+    <section style="padding: 40px 20px;">
+        <h2 style="text-align: center;">Featured Projects</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <!-- Project 1 -->
+            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 300px; background-color: #fff;">
+                <h3>Pro Realty Real Estate Analysis</h3>
+                <p>Developed a machine learning model to predict house prices in King County, optimizing investment decisions.</p>
+                <h4>Technologies Used:</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Scikit-learn</li>
+                    <li>Matplotlib</li>
+                    <li>Git & GitHub</li>
+                </ul>
+                <h4>Key Achievements:</h4>
+                <ul>
+                    <li>85% accuracy in price prediction</li>
+                    <li>Feature importance analysis</li>
+                </ul>
+                <a href="https://github.com/priscillanzula/pro_realty.git" style="color: blue;">View Project →</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 300px; background-color: #fff;">
+                <h3>SyriaTel Customer Churn Analysis</h3>
+                <p>Built a predictive analytics model to identify high-risk churn customers, enhancing retention strategies.</p>
+                <h4>Technologies Used:</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Classification Models</li>
+                    <li>Seaborn</li>
+                </ul>
+                <h4>Key Achievements:</h4>
+                <ul>
+                    <li>90% accuracy in churn prediction</li>
+                    <li>Key customer behavior insights</li>
+                </ul>
+                <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/" style="color: blue;">View Project →</a>
             </div>
         </div>
+    </section>
 
-        <!-- Navigation -->
-        <nav id="nav">
+    <!-- Business Analysis Section -->
+    <section style="background-color: #f9f9f9; padding: 40px 20px;">
+        <h2 style="text-align: center;">Business Analysis (Case Study: Kwanza Tukule)</h2>
+        <div style="max-width: 800px; margin: auto; border: 1px solid #ccc; border-radius: 8px; padding: 20px; background-color: #fff;">
+            <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.</p>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>Identified seasonal sales trends and high-revenue products.</li>
+                <li>Segmented customers to optimize marketing strategies.</li>
+                <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
+                <li>Detected anomalies impacting business performance.</li>
             </ul>
-        </nav>
+            <a href="#" style="color: blue;">Read Full Analysis →</a>
+        </div>
+    </section>
 
-        <!-- About Me -->
-        <section id="about" class="main">
-            <h2>About Me</h2>
-            <p>Innovative Data Scientist with expertise in machine learning, statistical analysis, and data visualization. Passionate about solving business problems using data-driven insights.</p>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="main">
-            <h2>Projects</h2>
-            <div>
-                <h3>Pro Realty Real Estate Analysis</h3>
-                <p>Predicting house prices using ML models.</p>
-                <a href="https://github.com/priscillanzula/pro_realty.git">View Project</a>
-            </div>
-            <div>
-                <h3>SyriaTel Customer Churn Analysis</h3>
-                <p>Churn prediction model for telecom.</p>
-                <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/">View Project</a>
-            </div>
-        </section>
-
-        <!-- Case Studies -->
-        <section id="case-studies" class="main">
-            <h2>Case Studies</h2>
-            <h3>Kwanza Tukule Business Analysis</h3>
-            <p>Conducted a data-driven analysis to enhance sales performance and customer retention.</p>
-            <a href="#">Read More</a>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="main">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: Python, SQL, JavaScript</li>
-                <li>Frameworks: React, Flask</li>
-                <li>Databases: PostgreSQL, MySQL</li>
-                <li>Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</li>
-                <li>Version Control: Git & GitHub</li>
-                <li>Other Tools: Google Sheets, Google Analytics, Microsoft Teams</li>
-            </ul>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="main">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-            <p>Phone: +254 792 214 211</p>
-            <p>Location: Nairobi, Kenya</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/priscillanzula">GitHub Profile</a></p>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Priscilla Nzula</p>
-        </footer>
-    </div>
+    <!-- Contact Section -->
+    <footer style="background-color: #333; color: white; padding: 40px 20px; text-align: center;">
+        <h2>Let's Connect</h2>
+        <p>Email: <a href="mailto:danielpriscilla61@gmail.com" style="color: lightblue;">danielpriscilla61@gmail.com</a></p>
+        <p>Phone: +254 792 214 211</p>
+        <p>Location: Nairobi, Kenya</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank" style="color: lightblue;">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank" style="color: lightblue;">GitHub Profile</a></p>
+    </footer>
 </body>
 </html>
