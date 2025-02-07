@@ -4,23 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priscilla Nzula - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .projects {
+            padding: 4rem 2rem;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #007bff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .project-card ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .project-card a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .business-analysis {
+            background: #f9f9f9;
+            padding: 4rem 2rem;
+        }
+
+        .business-analysis .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .business-analysis h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        footer h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        footer a {
+            color: #7cc5ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header style="background: linear-gradient(to right, #007bff, #0056b3); color: white; padding: 40px 20px; text-align: center;">
+    <header class="hero">
         <h1>Priscilla Nzula</h1>
         <h2>Data Scientist | Data Analyst</h2>
         <p>Innovative Data Scientist with a passion for transforming complex datasets into strategic business solutions. 
         Specializing in machine learning, statistical analysis, and data visualization to drive decision-making.</p>
     </header>
 
-    <!-- Projects Section -->
-    <section style="padding: 40px 20px;">
-        <h2 style="text-align: center;">Featured Projects</h2>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-            <!-- Project 1 -->
-            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 300px; background-color: #fff;">
+    <section class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
                 <h3>Pro Realty Real Estate Analysis</h3>
                 <p>Developed a machine learning model to predict house prices in King County, optimizing investment decisions.</p>
                 <h4>Technologies Used:</h4>
@@ -35,11 +179,10 @@
                     <li>85% accuracy in price prediction</li>
                     <li>Feature importance analysis</li>
                 </ul>
-                <a href="https://github.com/priscillanzula/pro_realty.git" style="color: blue;">View Project →</a>
+                <a href="https://github.com/priscillanzula/pro_realty.git">View Project →</a>
             </div>
 
-            <!-- Project 2 -->
-            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 300px; background-color: #fff;">
+            <div class="project-card">
                 <h3>SyriaTel Customer Churn Analysis</h3>
                 <p>Built a predictive analytics model to identify high-risk churn customers, enhancing retention strategies.</p>
                 <h4>Technologies Used:</h4>
@@ -53,15 +196,14 @@
                     <li>90% accuracy in churn prediction</li>
                     <li>Key customer behavior insights</li>
                 </ul>
-                <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/" style="color: blue;">View Project →</a>
+                <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/">View Project →</a>
             </div>
         </div>
     </section>
 
-    <!-- Business Analysis Section -->
-    <section style="background-color: #f9f9f9; padding: 40px 20px;">
-        <h2 style="text-align: center;">Business Analysis (Case Study: Kwanza Tukule)</h2>
-        <div style="max-width: 800px; margin: auto; border: 1px solid #ccc; border-radius: 8px; padding: 20px; background-color: #fff;">
+    <section class="business-analysis">
+        <h2>Business Analysis (Case Study: Kwanza Tukule)</h2>
+        <div class="container">
             <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.</p>
             <ul>
                 <li>Identified seasonal sales trends and high-revenue products.</li>
@@ -69,18 +211,17 @@
                 <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
                 <li>Detected anomalies impacting business performance.</li>
             </ul>
-            <a href="#" style="color: blue;">Read Full Analysis →</a>
+            <a href="#">Read Full Analysis →</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <footer style="background-color: #333; color: white; padding: 40px 20px; text-align: center;">
+    <footer>
         <h2>Let's Connect</h2>
-        <p>Email: <a href="mailto:danielpriscilla61@gmail.com" style="color: lightblue;">danielpriscilla61@gmail.com</a></p>
+        <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
         <p>Phone: +254 792 214 211</p>
         <p>Location: Nairobi, Kenya</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank" style="color: lightblue;">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank" style="color: lightblue;">GitHub Profile</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
     </footer>
 </body>
 </html>
