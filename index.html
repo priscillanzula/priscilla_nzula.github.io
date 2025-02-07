@@ -1,116 +1,127 @@
-Skip to content
-Navigation Menu
-priscillanzula
-priscilla_nzula.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla Nzula - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-Type / to search
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Files
-Go to file
-t
-LICENSE.txt
-README.md
-README.txt
-elements.html
-generic.html
-index.html
-priscilla_nzula.github.io
-/
-index.html
-in
-nzula_p
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
 
-Edit
+        .hero {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
 
-Preview
-Indent mode
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-left: 2rem;
+        }
 
-Spaces
-Indent size
+        .hero-content {
+            max-width: 800px;
+        }
 
-4
-Line wrap mode
+        .projects {
+            padding: 4rem 2rem;
+        }
 
-No wrap
-Editing index.html file contents
-Selection deleted
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-                </ul>
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #007bff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .business-analysis {
+            background: #f9f9f9;
+            padding: 4rem 2rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        footer i {
+            color: #7cc5ff;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero img {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Priscilla Nzula | Data Scientist</h1>
+            <p>A Data Scientist with a passion for uncovering insights, I specialize in transforming complex datasets into actionable strategies...</p>
+        </div>
+        <img src="https://raw.githubusercontent.com/username/repo/main/NDSCF3967.jpg" alt="Priscilla Nzula">
+
+    </header>
+
+    <section class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Pro Realty Real Estate Analysis</h3>
+                <p>Developed a comprehensive machine learning model to predict house prices...</p>
                 <a href="https://github.com/priscillanzula/pro_realty.git">View Project →</a>
             </div>
-
             <div class="project-card">
                 <h3>SyriaTel Customer Churn Analysis</h3>
-                <p>Built an advanced predictive analytics solution to identify customers at risk of churning, enabling proactive retention strategies and revenue protection. The project involved comprehensive data analysis and machine learning model development.</p>
-                <h4>Technologies Used:</h4>
-                <ul>
-                    <li>Python(Pandas, NumPy, Scikit-learn)</li>
-                    <li>Machine Learning (Classification Models)</li>
-                    <li>Data Visualization (Matplotlib, Seaborn)</li>
-                </ul>
-                <h4>Key Achievements:</h4>
-                <ul>
-                    <li>90% accuracy in churn prediction</li>
-                    <li>Key customer behavior insights</li>
-                    <li>Created actionable insights for retention strategies</li>
-                </ul>
+                <p>Built an advanced predictive analytics solution to identify customers at risk of churning...</p>
                 <a href="https://github.com/Saoke1219/syriatel_churn/blob/nzula_priscilla/">View Project →</a>
             </div>
         </div>
@@ -119,28 +130,18 @@ Selection deleted
     <section class="business-analysis">
         <h2>Case Study: Kwanza Tukule</h2>
         <div class="container">
-            <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule to enhance sales performance, customer retention, and operational efficiency.</p>
-            <ul>
-                <li>Identified seasonal sales trends and high-revenue products.</li>
-                <li>Segmented customers to optimize marketing strategies.</li>
-                <li>Developed sales forecasting models (ARIMA) for inventory management.</li>
-                <li>Detected anomalies impacting business performance.</li>
-            </ul>
-           
-            <a href=" https://github.com/priscillanzula/Case_study-.git">View Full Analysis →</a>
+            <p>Conducted a data-driven business analysis in collaboration with Kwanza Tukule...</p>
+            <a href="https://github.com/priscillanzula/Case_study-.git">View Full Analysis →</a>
         </div>
     </section>
 
     <footer>
         <h2>Let's Connect</h2>
-        <p>Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
-        <p>Phone: +254 792 214 211</p>
-        <p>Location: Nairobi, Kenya</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:danielpriscilla61@gmail.com">danielpriscilla61@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> Phone: +254 792 214 211</p>
+        <p><i class="fas fa-map-marker-alt"></i> Location: Nairobi, Kenya</p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/priscilla-nzula" target="_blank">LinkedIn Profile</a></p>
+        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/priscillanzula" target="_blank">GitHub Profile</a></p>
     </footer>
 </body>
 </html>
-
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-Editing priscilla_nzula.github.io/index.html at nzula_p · priscillanzula/priscilla_nzula.github.io 
